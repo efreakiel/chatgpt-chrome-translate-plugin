@@ -13,3 +13,4 @@
 .env
 *.log
 dist.zip
+/nbproject/private/

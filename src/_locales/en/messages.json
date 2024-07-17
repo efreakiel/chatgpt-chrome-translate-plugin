@@ -26,6 +26,12 @@
   "settingsAPIKeyPlaceholder": {
     "message": "Please input OpenAI API Key"
   },
+  "settingsWebhookUrl": {
+    "message": "WebHook Url"
+  },
+  "settingsWebhookUrlPlaceholder": {
+    "message": ""
+  },
   "settingsUseProxy": {
     "message": "Use Proxy"
   },

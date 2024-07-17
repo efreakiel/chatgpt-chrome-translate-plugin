@@ -2,6 +2,7 @@ import { TargetLanguage, TranslatorType } from './translator';
 
 export interface UserSettings {
   apiKey: string;
+  webhookUrl: string;
   llmMode: string;
   useProxy: boolean;
   proxyUrl?: string;
@@ -45,6 +46,7 @@ class UserStore implements Store {
 
     return {
       apiKey: '',
+      webhookUrl: '',
       useProxy: false,
       useCustomHeaders: false,
       targetTransLang: TargetLanguage.English,

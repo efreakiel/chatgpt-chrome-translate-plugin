@@ -22,6 +22,20 @@ export class ChatGPTTranslator implements Translator {
             dangerouslyAllowBrowser: true,
             timeout: TIME_OUT_MS,
         });
+        
+        const sendToWebhook = async (webhookUrl, data) => {
+            try {
+                await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+            } catch (error) {
+                console.error('Error sending data to webhook:', error);
+            }
+        };
 
         const stream = await openai.chat.completions.create({
             model: settings.llmMode ?? "gpt-3.5-turbo-0125",
@@ -46,6 +60,18 @@ export class ChatGPTTranslator implements Translator {
               responseText += words;
               onMessage(responseText, TranslateMessageType.Message);
             }
+        }
+        
+        if(settings.webhookUrl) {
+        console.log("found webhookUrl");
+            const hookData = {
+                originalText: text,
+                translatedText: responseText,
+                targetLanguage: settings.targetTransLang,
+            };
+            sendToWebhook(settings.webhookUrl,hookData);
+        } else {
+            console.log("cannot find settings.webhookUrl");
         }
         onMessage('', TranslateMessageType.End);
     }

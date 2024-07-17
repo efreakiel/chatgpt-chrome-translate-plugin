@@ -12,6 +12,7 @@ const Settings = () => {
   const [disableSaveButton, setDisableSaveButton] = React.useState<boolean>(true);
   const [userSettings, setUserSettings] = React.useState<UserSettings>({
     apiKey: "",
+    webhookUrl: "",
     useProxy: false,
     useCustomHeaders: false,
     targetTransLang: TargetLanguage.English,
@@ -95,6 +96,14 @@ const Settings = () => {
     setDisableSaveButton(false);
   }
 
+  const handleWebhookUrlChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setUserSettings({
+      ...userSettings,
+      webhookUrl: e.target.value
+    });
+    setDisableSaveButton(false);
+  }
+
   const handleTranslatorTypeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     setUserSettings({
       ...userSettings,
@@ -171,6 +180,16 @@ const Settings = () => {
                 placeholder={chrome.i18n.getMessage("settingsAPIKeyPlaceholder")}
                 onChange={handleApiKeyChange}
                 onBlur={checkApiKey} />
+            </span>
+          </li>
+          <li>
+            <span>{chrome.i18n.getMessage("settingsWebhookUrl")}</span>
+            <span>
+              <input type="text"
+                value={userSettings.webhookUrl}
+                placeholder={chrome.i18n.getMessage("settingsWebhookUrlPlaceholder")}
+                onChange={handleWebhookUrlChange}
+                />
             </span>
           </li>
           <li>
