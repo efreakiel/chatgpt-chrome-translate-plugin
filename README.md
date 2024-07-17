@@ -8,6 +8,7 @@ This is a completely free and open source project. You can configure your api ke
 - Automatically detect the language of the selected text and auto translate it into your desired language.
 - Support the context menu and shortcut key to translate the selected text.
 - Support proxy and custom headers for the people who use a proxy to access ChatGPT.
+- Support a webhook url so the data can be sent to your own app/server.
 - Support 20+ languages.
 - Can highlight the selected text, just like a marker pen.
 
