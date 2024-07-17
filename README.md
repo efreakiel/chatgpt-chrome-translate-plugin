@@ -59,7 +59,10 @@ Click this link to see the [demo video](https://www.youtube.com/watch?v=JLqsyhCx
 If you use a VPN tool to access ChatGPT or it's API, you need to turn on the VPN while using this extension. 
 But if you don't want to use a VPN, we provide this free proxy **https://common.navitechai.com/v1** to drive this extension, you can try it in your country. Hope it works for you.  
 To config proxy as the screenshot below: 
-![config the proxy](/images/free-proxy.png)   
+![config the proxy](/images/free-proxy.png)
+
+## Webhook URL Setting  
+The Webhook URL if set will receive the following POST variables: originalText, translatedText, targetLanguage  
 
 (**Attention** Wen can't guarantee the stability of this free proxy, if it doesn't work, you can try to use a VPN tool to access ChatGPT.)
 
