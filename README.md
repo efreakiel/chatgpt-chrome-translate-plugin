@@ -13,7 +13,7 @@ This is a completely free and open source project. You can configure your api ke
 - Can highlight the selected text, just like a marker pen.
 
 ## Installation
-Compile the extension with 'npm run build' or unzip the chrome_extension.zip file and Load the extension in Chrome by navigating to chrome://extensions/, enabling "Developer mode," and clicking "Load unpacked."
+Compile the extension with 'npm run build' or unzip the compiled_extension.zip file and Load the extension in Chrome by navigating to chrome://extensions/, enabling "Developer mode," and clicking "Load unpacked."
 Then Select the extension's directory (the dist folder extracted from chrome_extension.zip).
 
 ## How to setting
