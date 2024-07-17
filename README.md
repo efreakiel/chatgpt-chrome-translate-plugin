@@ -62,7 +62,7 @@ To config proxy as the screenshot below:
 ![config the proxy](/images/free-proxy.png)
 
 ## Webhook URL Setting  
-The Webhook URL if set will receive the following POST variables: originalText, translatedText, targetLanguage  
+The Webhook URL if set will receive the following JSON variables: originalText, translatedText, targetLanguage  
 
 (**Attention** Wen can't guarantee the stability of this free proxy, if it doesn't work, you can try to use a VPN tool to access ChatGPT.)
 
