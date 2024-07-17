@@ -62,10 +62,10 @@ But if you don't want to use a VPN, we provide this free proxy **https://common.
 To config proxy as the screenshot below: 
 ![config the proxy](/images/free-proxy.png)
 
+(**Attention** Wen can't guarantee the stability of this free proxy, if it doesn't work, you can try to use a VPN tool to access ChatGPT.)
+
 ## Webhook URL Setting  
 The Webhook URL if set will receive the following JSON variables: originalText, translatedText, targetLanguage  
-
-(**Attention** Wen can't guarantee the stability of this free proxy, if it doesn't work, you can try to use a VPN tool to access ChatGPT.)
 
 ## Common issues   
 - **Can't translate the selected text and always show 'Translating...'**   
